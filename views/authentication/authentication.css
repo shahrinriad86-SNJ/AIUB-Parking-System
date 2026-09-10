@@ -1,0 +1,267 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* login */
+
+#loginForm {
+    width: 390px;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid #1565c0;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.18);
+}
+
+#loginForm:before {
+     content: "AIUB PARKING SYSTEM";
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1565c0;
+    margin-bottom: 20px;
+}
+
+#loginForm:after {
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #78909c;
+    margin-bottom: 28px;
+}
+
+#loginForm label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263238;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+#loginForm input[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#loginForm input[type="submit"]:hover {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    transform: translateY(-1px);
+}
+
+#loginForm span {
+    display: block;
+    color: #d32f2f;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+#loginForm a {
+    color: #1565c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#loginForm a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+
+/* registration */
+
+#registrationForm {
+    width: 440px;
+    background: white;
+    padding: 38px;
+    border-radius: 16px;
+    border: 2px solid #1565c0;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.18);
+}
+
+#registrationForm h2 {
+    margin: 0 0 28px 0;
+    text-align: center;
+    color: #1565c0;
+    font-size: 26px;
+}
+
+#registrationForm label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263238;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#registrationForm input[type="text"],
+#registrationForm input[type="email"],
+#registrationForm input[type="password"],
+#registrationForm select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    transition: 0.2s;
+}
+
+#registrationForm input[type="text"]:focus,
+#registrationForm input[type="email"]:focus,
+#registrationForm input[type="password"]:focus,
+#registrationForm select:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+#registrationForm button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#registrationForm button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    transform: translateY(-1px);
+}
+
+#registrationForm a {
+    color: #1565c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#registrationForm a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+
+/* forgot-password */
+
+#forgotPasswordForm {
+    width: 410px;
+    background: white;
+    padding: 38px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(13, 71, 161, 0.18);
+    border: 2px solid #1565c0;
+}
+
+#forgotPasswordForm h2 {
+    margin: 0 0 28px 0;
+    text-align: center;
+    color: #1565c0;
+    font-size: 26px;
+}
+
+#forgotPasswordForm label {
+    display: block;
+    margin-bottom: 7px;
+    color: #263238;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#forgotPasswordForm input[type="text"],
+#forgotPasswordForm input[type="email"],
+#forgotPasswordForm input[type="password"] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+    transition: 0.2s;
+}
+
+#forgotPasswordForm input[type="text"]:focus,
+#forgotPasswordForm input[type="email"]:focus,
+#forgotPasswordForm input[type="password"]:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.12);
+}
+
+#forgotPasswordForm input[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#forgotPasswordForm input[type="submit"]:hover {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    transform: translateY(-1px);
+}
+
+#forgotPasswordForm span {
+    display: block;
+    color: #d32f2f;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+#forgotPasswordForm a {
+    color: #1565c0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#forgotPasswordForm a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}

@@ -1,0 +1,366 @@
+/* Dashboard */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #263238;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: rgb(210, 118, 118);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #455a64;
+}
+
+#logoutBtn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    border: none;
+    background: #d9534f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#logoutBtn:hover {
+    background: #c9302c;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 30px;
+}
+
+.content h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: rgb(23, 23, 180);
+}
+
+.content > p {
+    color: #666;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 30%;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: #666;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #2b7ca2;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card a:hover {
+    background: #185371;
+}
+
+
+/* users */
+
+.users-container {
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.users-container h1 {
+    margin: 0 0 15px 0;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 8px 12px;
+    background: #455a64;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-btn:hover {
+    background: #37474f;
+}
+
+.users-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.users-container th,
+.users-container td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.users-container th {
+    background: #455a64;
+    color: white;
+}
+
+.users-container tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.delete-btn {
+    color: white;
+    background: #d9534f;
+    padding: 6px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background: #c9302c;
+}
+
+.logout-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background: #d9534f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout-link:hover {
+    background: #c9302c;
+}
+
+
+
+/* Parking Slots */
+
+.users-container h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.users-container form {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.users-container form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.users-container form button {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: none;
+    background: #2b7ca2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.users-container form button:hover {
+    background: #185371;
+}
+
+.users-container table {
+    margin-top: 20px;
+}
+
+.users-container table th {
+    background: #455a64;
+    color: white;
+}
+
+.users-container table td {
+    vertical-align: middle;
+}
+
+.users-container table td:nth-child(3) {
+    font-weight: bold;
+}
+
+.users-container .back-btn {
+    padding: 6px 10px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    background: #2b7ca2;
+}
+
+.users-container .back-btn:hover {
+    background: #185371;
+}
+
+.slots-container {
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.slots-container h1 {
+    margin: 0 0 15px 0;
+}
+
+.slots-container h2 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.slots-container form {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.slots-container form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.slots-container form button {
+    padding: 10px 18px;
+    margin-left: 8px;
+    border: none;
+    background: #2b7ca2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slots-container form button:hover {
+    background: #185371;
+}
+
+.slots-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.slots-container th,
+.slots-container td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.slots-container th {
+    background: #455a64;
+    color: white;
+}
+
+.slots-container tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+.slots-container .back-btn {
+    display: inline-block;
+    padding: 6px 10px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    background: #2b7ca2;
+}
+
+.slots-container .back-btn:hover {
+    background: #185371;
+}
+
+
+
+/* Information Page */
+
+.information-container {
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.information-container h1 {
+    margin: 0 0 30px 0;
+    color: rgb(23, 23, 180);
+}
+
+.information-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.information-card {
+    background: white;
+    width: 30%;
+    min-width: 200px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.information-card h3 {
+    margin-top: 0;
+    color: #455a64;
+}
+
+.information-card p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #2b7ca2;
+}

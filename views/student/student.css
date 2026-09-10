@@ -1,0 +1,325 @@
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #bcd1db;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    
+}
+.container
+{
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+#dashboardSection
+{
+    background-color: white;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(23, 105, 170, 0.15);
+    border: 1px solid #dceeff;
+}
+.dashboard-header
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1
+{
+    color: #1769aa;
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+.dashboard-header p
+{
+    color: #718096;
+    margin: 0;
+    font-size: 15px;
+}
+
+.menu
+{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu button
+{
+    width: 280px;
+    min-height: 150px;
+    background: linear-gradient(135deg, #1769aa, #2386d1);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    box-shadow: 0 7px 18px rgba(23, 105, 170, 0.25);
+}
+
+.menu button:hover
+{
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(23, 105, 170, 0.35);
+}
+
+.menu button span
+{
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.menu button strong
+{
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.menu button small
+{
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+#logoutBtn
+{
+    display: block;
+    margin: 35px auto 0 auto;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#logoutBtn:hover
+{
+    background-color: #c0392b;
+}
+
+#parkingSection,
+#bookingSection
+{
+    display: none;
+    background-color: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(23, 105, 170, 0.15);
+    border: 1px solid #dceeff;
+}
+
+.section-header
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2
+{
+    color: #1769aa;
+    font-size: 28px;
+    margin: 0 0 8px 0;
+}
+
+.section-header p
+{
+    color: #718096;
+    margin: 0;
+}
+
+.slot-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.slot-card
+{
+    background-color: #f8fbff;
+    border: 1px solid #d8eafb;
+    border-radius: 12px;
+    padding: 22px;
+    width: 260px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.slot-top,
+.booking-top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.slot-card h3,
+.booking-card h3
+{
+    color: #1769aa;
+    margin: 0;
+    font-size: 20px;
+}
+
+.status
+{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.available
+{
+    background-color: #dff6e7;
+    color: #218838;
+}
+
+.status.booked
+{
+    background-color: #ffe2e0;
+    color: #c0392b;
+}
+
+.status.pending
+{
+    background-color: #fff0c7;
+    color: #a66b00;
+}
+
+.status.active
+{
+    background-color: #dff6e7;
+    color: #218838;
+}
+
+.status.cancelled
+{
+    background-color: #ffe2e0;
+    color: #c0392b;
+}
+
+.slot-card form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.slot-card label
+{
+    margin-top: 9px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: #444;
+}
+
+.slot-card input
+{
+    padding: 10px;
+    border: 1px solid #ccd9e5;
+    border-radius: 6px;
+    outline: none;
+}
+
+.slot-card input:focus
+{
+    border-color: #1769aa;
+}
+
+.slot-card form button
+{
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    padding: 11px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.slot-card form button:hover
+{
+    background-color: #0d4f82;
+}
+
+.unavailable
+{
+    color: #888;
+    font-size: 14px;
+}
+
+.booking-card
+{
+    background-color: #f8fbff;
+    border: 1px solid #d8eafb;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.booking-card p
+{
+    color: #555;
+    margin: 9px 0;
+}
+
+.cancel-btn
+{
+    display: inline-block;
+    margin-top: 12px;
+    color: white;
+    background-color: #e74c3c;
+    padding: 9px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.cancel-btn:hover
+{
+    background-color: #c0392b;
+}
+
+.no-booking
+{
+    text-align: center;
+    padding: 30px;
+    color: #777;
+}
+
+#backFromParking,
+#backFromBooking
+{
+    display: block;
+    margin: 35px auto 0 auto;
+    background-color: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#backFromParking:hover,
+#backFromBooking:hover
+{
+    background-color: #0d4f82;
+}
