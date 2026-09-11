@@ -32,12 +32,30 @@ if (isset($_POST["update"]))
 {
     $id = $_POST["id"];
     $slot_number = $_POST["slot_number"];
+    $status = $_POST["status"];
 
-    $sql = "UPDATE parking_slots SET slot_number=? WHERE id=?";
+    $sql = "UPDATE parking_slots SET slot_number=?, status=? WHERE id=?";
 
     $stmt = mysqli_prepare($conn, $sql);
 
-    mysqli_stmt_bind_param($stmt, "si", $slot_number, $id);
+    mysqli_stmt_bind_param($stmt, "ssi", $slot_number, $status, $id);
+
+    mysqli_stmt_execute($stmt);
+
+    header("Location: slots.php");
+    exit();
+}
+
+if (isset($_POST["change_status"]))
+{
+    $id = $_POST["id"];
+    $status = $_POST["status"];
+
+    $sql = "UPDATE parking_slots SET status=? WHERE id=?";
+
+    $stmt = mysqli_prepare($conn, $sql);
+
+    mysqli_stmt_bind_param($stmt, "si", $status, $id);
 
     mysqli_stmt_execute($stmt);
 
@@ -100,7 +118,6 @@ $result = mysqli_query($conn, $sql);
 
 <body>
 
-
 <div class="slots-container">
 
     <h1>Parking Slots</h1>
@@ -114,16 +131,23 @@ $result = mysqli_query($conn, $sql);
 
     <h2>Edit Parking Slot</h2>
 
-    <form action="slots.php" method="POST">
+    <form action="slots.php" method="POST" class="slot-add-form">
 
-        <input type="hidden" name="id" value="<?php echo $edit_slot["id"]; ?>">
+        <input
+            type="hidden"
+            name="id"
+            value="<?php echo $edit_slot["id"]; ?>" >
 
         <input
             type="text"
             name="slot_number"
             value="<?php echo $edit_slot["slot_number"]; ?>"
-            required
-        >
+            required >
+
+        <input
+            type="hidden"
+            name="status"
+            value="<?php echo $edit_slot["status"]; ?>" >
 
         <button type="submit" name="update">
             Update Slot
@@ -143,15 +167,13 @@ $result = mysqli_query($conn, $sql);
 
     ?>
 
-
-    <form action="slots.php" method="POST">
+    <form action="slots.php" method="POST" class="slot-add-form">
 
         <input
             type="text"
             name="slot_number"
             placeholder="Enter Slot Number"
-            required
-        >
+            required >
 
         <button type="submit" name="add">
             Add Slot
@@ -195,19 +217,35 @@ $result = mysqli_query($conn, $sql);
 
             <td>
 
-                <a
-                    href="slots.php?edit=<?php echo $slot["id"]; ?>"
-                    class="back-btn"
-                >
-                    Edit
-                </a>
+                <div class="action-buttons">
 
-                <a
-                    href="slots.php?delete=<?php echo $slot["id"]; ?>"
-                    class="delete-btn"
-                >
-                    Delete
-                </a>
+                    <form action="slots.php" method="POST">
+
+                        <input
+                            type="hidden"
+                            name="id"
+                            value="<?php echo $slot["id"]; ?>" >
+
+                        <input
+                            type="hidden"
+                            name="status"
+                            value="<?php echo $slot["status"] == "available" ? "booked" : "available"; ?>" >
+
+                        <button
+                            type="submit"
+                            name="change_status" >
+                            <?php echo $slot["status"] == "available" ? "Booked" : "Available"; ?>
+                        </button>
+
+                    </form>
+
+                    <a
+                        href="slots.php?delete=<?php echo $slot["id"]; ?>"
+                        class="delete-btn" >
+                        Delete
+                    </a>
+
+                </div>
 
             </td>
 
@@ -225,8 +263,7 @@ $result = mysqli_query($conn, $sql);
 
     <a
         href="../../controllers/logoutController.php"
-        class="logout-link"
-    >
+        class="logout-link" >
         Logout
     </a>
 
