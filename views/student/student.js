@@ -1,29 +1,11 @@
 document.getElementById("parkingBtn").addEventListener("click", function()
 {
-    document.getElementById("dashboardSection").style.display = "none";
-    document.getElementById("parkingSection").style.display = "block";
-    document.getElementById("bookingSection").style.display = "none";
+    window.location.href = "book-slot.php";
 });
 
 document.getElementById("bookingBtn").addEventListener("click", function()
 {
-    document.getElementById("dashboardSection").style.display = "none";
-    document.getElementById("parkingSection").style.display = "none";
-    document.getElementById("bookingSection").style.display = "block";
-});
-
-document.getElementById("backFromParking").addEventListener("click", function()
-{
-    document.getElementById("dashboardSection").style.display = "block";
-    document.getElementById("parkingSection").style.display = "none";
-    document.getElementById("bookingSection").style.display = "none";
-});
-
-document.getElementById("backFromBooking").addEventListener("click", function()
-{
-    document.getElementById("dashboardSection").style.display = "block";
-    document.getElementById("parkingSection").style.display = "none";
-    document.getElementById("bookingSection").style.display = "none";
+    window.location.href = "my-bookings.php";
 });
 
 document.getElementById("logoutBtn").addEventListener("click", function()
